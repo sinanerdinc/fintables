@@ -51,6 +51,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "cli.cmd.post": "Fintables research articles and company notes",
         "cli.cmd.video": "Fintables YouTube and stock market videos",
         "cli.cmd.notification": "Displays and manages Fintables notifications",
+        "cli.cmd.shell": "Starts interactive REPL shell session",
 
         # CLI Shared Options & Arguments
         "cli.common.output_help": "Output format: table or json",
@@ -760,6 +761,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "cli.cmd.post": "Fintables araştırma yazıları ve şirket notları",
         "cli.cmd.video": "Fintables YouTube ve borsa videoları",
         "cli.cmd.notification": "Fintables bildirimlerini görüntüler ve yönetir",
+        "cli.cmd.shell": "İnteraktif REPL kabuk oturumunu başlatır",
 
         # CLI Shared Options & Arguments
         "cli.common.output_help": "Çıktı formatı: table veya json",

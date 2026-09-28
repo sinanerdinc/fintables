@@ -38,6 +38,22 @@ fintables --install-completion fish
 ```
 *(Kurulum tamamlandıktan sonra terminalinizi kapatıp açmanız veya `source ~/.zshrc` çalıştırmanız yeterlidir.)*
 
+## İnteraktif Shell / REPL Modu
+
+Her komut için tekrar `fintables` yazmak yerine interaktif bir finans terminali ortamı başlatabilirsiniz:
+
+```bash
+fintables shell
+```
+
+```text
+🚀 Fintables Interactive Shell (v0.1.0)
+fintables> company ASELS
+fintables> symbol FROTO summary
+fintables> watchlist add FROTO
+fintables> exit
+```
+
 ## Python SDK Kullanımı
 
 Paketi başka bir Python projesinde kütüphane/SDK olarak kullanmak isterseniz `FintablesClient` istemcisini ve endpoint fonksiyonlarını doğrudan import edebilirsiniz:
