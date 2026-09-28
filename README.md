@@ -22,6 +22,22 @@ pip install -e ".[dev]"
 cp .env.example .env
 ```
 
+## Shell Otomatik Tamamlama (Autocompletion)
+
+Terminalde `fintables` komutlarını ve hisse kodlarını `<TAB>` tuşu ile otomatik tamamlamak için kullandığınız kabuğa uygun komutla bir defalık kurulum yapabilirsiniz:
+
+```bash
+# Zsh kullanıyorsanız (Mac varsayılanı)
+fintables --install-completion zsh
+
+# Bash kullanıyorsanız
+fintables --install-completion bash
+
+# Fish kullanıyorsanız
+fintables --install-completion fish
+```
+*(Kurulum tamamlandıktan sonra terminalinizi kapatıp açmanız veya `source ~/.zshrc` çalıştırmanız yeterlidir.)*
+
 ## Python SDK Kullanımı
 
 Paketi başka bir Python projesinde kütüphane/SDK olarak kullanmak isterseniz `FintablesClient` istemcisini ve endpoint fonksiyonlarını doğrudan import edebilirsiniz:

@@ -8,11 +8,13 @@ from fintables.exceptions import FintablesError
 from fintables.i18n import t
 from fintables.output.formatter import print_company_table, print_json
 
+from fintables.cli.completion import complete_ticker
+
 console = Console()
 
 
 def company_command(
-    ticker: str = typer.Argument(..., help=t("cli.common.ticker_help")),
+    ticker: str = typer.Argument(..., help=t("cli.common.ticker_help"), autocompletion=complete_ticker),
     output: str = typer.Option("table", "--output", "-o", help=t("cli.common.output_help")),
 ) -> None:
     """Fetches company general profile and ratio types."""

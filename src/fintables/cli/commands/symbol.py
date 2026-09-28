@@ -13,11 +13,13 @@ from fintables.output.formatter import (
     print_symbol_summary_table,
 )
 
+from fintables.cli.completion import complete_ticker
+
 console = Console()
 
 
 def symbol_command(
-    ticker: str = typer.Argument(..., help=t("cli.common.ticker_help")),
+    ticker: str = typer.Argument(..., help=t("cli.common.ticker_help"), autocompletion=complete_ticker),
     subcommand: str = typer.Argument("summary", help=t("cli.symbol.subcommand_help")),
     sheet: str = typer.Option("all", "--sheet", "-s", help=t("cli.symbol.sheet_help")),
     periods: int = typer.Option(5, "--periods", "-p", help=t("cli.symbol.periods_help")),
