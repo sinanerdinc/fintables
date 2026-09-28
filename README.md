@@ -118,4 +118,18 @@ fintables --lang en [COMMAND]                 # İngilizce CLI ve çıktılar
 export FINTABLES_LANG=tr  # ya da en
 ```
 
+## Yasal Uyarı (Disclaimer)
+
+> **Önemli:** Bu proje tamamen **eğitim ve kişisel kullanım amacıyla** geliştirilmiş açık kaynaklı gayriresmi bir araçtır. 
+> 
+> - Fintables (Fintables Bilişim Teknolojileri A.Ş.) ile hiçbir resmi bağı, ortaklığı veya sponsorluğu yoktur.
+> - Bu araç finansal tavsiye, yatırım tavsiyesi veya alım-satım önerisi sunmaz.
+> - Verilerin doğruluğu, güncelliği veya eksiksizliği konusunda herhangi bir garanti verilmez. Veri sağlayıcısından alınan verilerin kullanımında doğabilecek her türlü sorumluluk kullanıcıya aittir.
+> - Yazılım "olduğu gibi" (AS IS) sunulmaktadır; yazar ve geliştiriciler doğabilecek doğrudan veya dolaylı hiçbir zarardan sorumlu tutulamaz.
+
+## Lisans
+
+Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
+
+
 
