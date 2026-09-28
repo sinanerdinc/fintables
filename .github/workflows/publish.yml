@@ -38,6 +38,9 @@ jobs:
         run: |
           uv sync --all-extras
           uv run pytest
+        env:
+          FINTABLES_EMAIL: ${{ secrets.FINTABLES_EMAIL }}
+          FINTABLES_PASSWORD: ${{ secrets.FINTABLES_PASSWORD }}
 
       - name: Build package with dynamic version
         run: uv build

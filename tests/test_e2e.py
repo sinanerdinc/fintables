@@ -1,5 +1,19 @@
+import os
 import pytest
 from fintables import FintablesClient
+from fintables.config import settings
+
+HAS_CREDENTIALS = bool(
+    os.getenv("FINTABLES_PASSWORD")
+    or os.getenv("FINTABLES_EMAIL")
+    or os.getenv("FINTABLES_USERNAME")
+    or settings.password
+)
+
+skip_if_no_credentials = pytest.mark.skipif(
+    not HAS_CREDENTIALS,
+    reason="FINTABLES_PASSWORD/EMAIL/USERNAME ortam değişkenleri tanımlı olmadığı için E2E testi atlandı.",
+)
 from fintables.api.auth import login, refresh_token
 from fintables.api.endpoints import (
     # Agenda
@@ -49,6 +63,7 @@ from fintables.api.endpoints import (
 )
 
 
+@skip_if_no_credentials
 @pytest.mark.asyncio
 async def test_e2e_auth_flow():
     """Auth login ve token doğrulama akışını test eder."""
@@ -68,6 +83,7 @@ async def test_e2e_auth_flow():
             assert new_access is not None
 
 
+@skip_if_no_credentials
 @pytest.mark.asyncio
 async def test_e2e_public_and_read_endpoints():
     """Tüm okuma ve sorgulama endpoint'lerinin parametre alternatifleriyle çalıştığını doğrular."""
@@ -144,6 +160,7 @@ async def test_e2e_public_and_read_endpoints():
         assert mark_res is not None
 
 
+@skip_if_no_credentials
 @pytest.mark.asyncio
 async def test_e2e_watchlist_lifecycle():
     """Favorilere ekleme ve çıkarma yaşam döngüsünü test eder."""
@@ -155,6 +172,7 @@ async def test_e2e_watchlist_lifecycle():
         assert rem_res is not None
 
 
+@skip_if_no_credentials
 @pytest.mark.asyncio
 async def test_e2e_memo_lifecycle():
     """Not oluşturma, güncelleme ve silme yaşam döngüsünü test eder."""
@@ -174,6 +192,7 @@ async def test_e2e_memo_lifecycle():
         await delete_memo(client, new_memo.id)
 
 
+@skip_if_no_credentials
 @pytest.mark.asyncio
 async def test_e2e_portfolio_lifecycle():
     """Portföy yönetimi yaşam döngüsünü test eder."""
