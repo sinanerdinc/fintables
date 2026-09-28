@@ -1,5 +1,6 @@
 from typing import Any
 from fintables.exceptions import AuthError
+from fintables.i18n import t
 
 
 async def login(
@@ -46,13 +47,10 @@ async def login(
     except Exception as e:
         if isinstance(e, AuthError):
             raise
-        raise AuthError(f"Giriş isteği sırasında hata oluştu: {type(e).__name__}") from e
+        raise AuthError(t("error.login_request_failed", error=type(e).__name__)) from e
 
-    error_msg = resp.text if "resp" in locals() and hasattr(resp, "text") else "Bilinmeyen hata"
-    raise AuthError(
-        f"Giriş yapılamadı: {error_msg}. "
-        "Lütfen FINTABLES_USERNAME/FINTABLES_EMAIL ve FINTABLES_PASSWORD ayarlarınızı kontrol edin."
-    )
+    error_msg = resp.text if "resp" in locals() and hasattr(resp, "text") else "Unknown error"
+    raise AuthError(t("error.login_failed", detail=error_msg))
 
 
 async def refresh_token(
@@ -82,6 +80,6 @@ async def refresh_token(
             if access:
                 return access
     except Exception as e:
-        raise AuthError(f"Token yenileme sırasında hata oluştu: {type(e).__name__}") from e
+        raise AuthError(t("error.refresh_failed", error=type(e).__name__)) from e
 
-    raise AuthError("Token yenilenemedi. Lütfen tekrar giriş yapın.")
+    raise AuthError(t("error.refresh_unsuccessful"))

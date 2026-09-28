@@ -19,6 +19,14 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         # Common / Errors
         "error.prefix": "[bold red]Error:[/bold red]",
         "error.unknown_subcommand": "Unknown subcommand: '{subcommand}'. Supported: {supported}",
+        "error.auth_required": "Authentication is required for this operation. Please set FINTABLES_USERNAME or FINTABLES_EMAIL and FINTABLES_PASSWORD in your .env file.",
+        "error.session_expired": "Session expired or authentication failed.",
+        "error.not_found": "Requested resource not found (404): {url}",
+        "error.api_error": "API error ({status}): {detail}",
+        "error.login_request_failed": "An error occurred during login request: {error}",
+        "error.login_failed": "Login failed: {detail}. Please check your FINTABLES_USERNAME/FINTABLES_EMAIL and FINTABLES_PASSWORD settings.",
+        "error.refresh_failed": "An error occurred during token refresh: {error}",
+        "error.refresh_unsuccessful": "Token refresh failed. Please log in again.",
         "common.yes": "Yes",
         "common.no": "No",
 
@@ -720,6 +728,14 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         # Common / Errors
         "error.prefix": "[bold red]Hata:[/bold red]",
         "error.unknown_subcommand": "Bilinmeyen alt komut: '{subcommand}'. Desteklenenler: {supported}",
+        "error.auth_required": "Bu işlem için kimlik doğrulama gereklidir. Lütfen .env dosyasında FINTABLES_USERNAME veya FINTABLES_EMAIL ve FINTABLES_PASSWORD değerlerini ayarlayın.",
+        "error.session_expired": "Oturum süresi doldu veya kimlik doğrulama başarısız oldu.",
+        "error.not_found": "İstenen kaynak bulunamadı (404): {url}",
+        "error.api_error": "API hatası ({status}): {detail}",
+        "error.login_request_failed": "Giriş isteği sırasında hata oluştu: {error}",
+        "error.login_failed": "Giriş yapılamadı: {detail}. Lütfen FINTABLES_USERNAME/FINTABLES_EMAIL ve FINTABLES_PASSWORD ayarlarınızı kontrol edin.",
+        "error.refresh_failed": "Token yenileme sırasında hata oluştu: {error}",
+        "error.refresh_unsuccessful": "Token yenilenemedi. Lütfen tekrar giriş yapın.",
         "common.yes": "Evet",
         "common.no": "Hayır",
 

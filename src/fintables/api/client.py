@@ -14,7 +14,7 @@ except ImportError:
 from fintables.api.auth import login, refresh_token
 from fintables.config import Settings, settings
 from fintables.exceptions import APIError, AuthError, NotFoundError
-
+from fintables.i18n import t
 
 _logger = logging.getLogger("fintables.client")
 _ALLOWED_HOSTS = {"api.fintables.com", "gate.fintables.com"}
@@ -80,10 +80,7 @@ class FintablesClient:
             self._access_token = access
             self._refresh_token = refresh
         else:
-            raise AuthError(
-                "Bu işlem için kimlik doğrulama gereklidir. "
-                "Lütfen .env dosyasında FINTABLES_USERNAME veya FINTABLES_EMAIL ve FINTABLES_PASSWORD değerlerini ayarlayın."
-            )
+            raise AuthError(t("error.auth_required"))
 
     async def _try_refresh_or_relogin(self) -> bool:
         """Attempts to refresh token or re-login. Returns True if succeeded."""
@@ -155,16 +152,16 @@ class FintablesClient:
                 req_headers["Authorization"] = f"Bearer {self._access_token}"
                 response = await self._client.request(method, url, headers=req_headers, **kwargs)  # type: ignore[arg-type]
             else:
-                raise AuthError("Oturum süresi doldu veya kimlik doğrulama başarısız oldu.")
+                raise AuthError(t("error.session_expired"))
 
         if response.status_code == 404:
-            raise NotFoundError(f"İstenen kaynak bulunamadı (404): {url}")
+            raise NotFoundError(t("error.not_found", url=url))
 
         if response.status_code >= 400:
             resp_text = response.text
             truncated = (resp_text[:200] + "...") if len(resp_text) > 200 else resp_text
             raise APIError(
-                f"API hatası ({response.status_code}): {truncated}",
+                t("error.api_error", status=response.status_code, detail=truncated),
                 status_code=response.status_code,
                 response_text=resp_text,
             )
