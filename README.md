@@ -20,64 +20,6 @@ pip install fintables
 cp .env.example .env
 ```
 
-## Shell Otomatik Tamamlama (Autocompletion)
-
-Terminalde `fintables` komutlarını ve hisse kodlarını `<TAB>` tuşu ile otomatik tamamlamak için kullandığınız kabuğa uygun komutla bir defalık kurulum yapabilirsiniz:
-
-```bash
-# Zsh kullanıyorsanız (Mac varsayılanı)
-fintables --install-completion zsh
-
-# Bash kullanıyorsanız
-fintables --install-completion bash
-
-# Fish kullanıyorsanız
-fintables --install-completion fish
-```
-*(Kurulum tamamlandıktan sonra terminalinizi kapatıp açmanız veya `source ~/.zshrc` çalıştırmanız yeterlidir.)*
-
-## İnteraktif Shell / REPL Modu
-
-Her komut için tekrar `fintables` yazmak yerine interaktif bir finans terminali ortamı başlatabilirsiniz:
-
-```bash
-fintables shell
-```
-
-```text
-🚀 Fintables Interactive Shell (v0.1.0)
-fintables> company ASELS
-fintables> symbol FROTO summary
-fintables> watchlist add FROTO
-fintables> exit
-```
-
-## Python SDK Kullanımı
-
-Paketi başka bir Python projesinde kütüphane/SDK olarak kullanmak isterseniz `FintablesClient` istemcisini ve endpoint fonksiyonlarını doğrudan import edebilirsiniz:
-
-```python
-import asyncio
-from fintables import FintablesClient
-from fintables.api.endpoints import get_company, get_symbol_summary, add_favorite
-
-async def main():
-    async with FintablesClient() as client:
-        # Şirket detayları (Public)
-        company = await get_company(client, "ASELS")
-        print(f"Şirket Kodu: {company.code} | Ünvan: {company.title}")
-
-        # Sembol özeti (Public)
-        summary = await get_symbol_summary(client, "ASELS")
-        print(f"Sektör Sayısı: {len(summary.data.sectors)}")
-
-        # Favori ekleme (Authenticated - .env bilgilerini kullanır)
-        # res = await add_favorite(client, "ASELS")
-
-if __name__ == "__main__":
-    asyncio.run(main())
-```
-
 ## CLI Kullanımı
 ```bash
 # Şirket bilgisi
@@ -172,6 +114,65 @@ fintables --lang tr [KOMUT]                   # Türkçe CLI ve çıktılar (var
 fintables --lang en [COMMAND]                 # İngilizce CLI ve çıktılar
 # Veya ortam değişkeni:
 export FINTABLES_LANG=tr  # ya da en
+```
+
+
+## Shell Otomatik Tamamlama (Autocompletion)
+
+Terminalde `fintables` komutlarını ve hisse kodlarını `<TAB>` tuşu ile otomatik tamamlamak için kullandığınız kabuğa uygun komutla bir defalık kurulum yapabilirsiniz:
+
+```bash
+# Zsh kullanıyorsanız (Mac varsayılanı)
+fintables --install-completion zsh
+
+# Bash kullanıyorsanız
+fintables --install-completion bash
+
+# Fish kullanıyorsanız
+fintables --install-completion fish
+```
+*(Kurulum tamamlandıktan sonra terminalinizi kapatıp açmanız veya `source ~/.zshrc` çalıştırmanız yeterlidir.)*
+
+## İnteraktif Shell / REPL Modu
+
+Her komut için tekrar `fintables` yazmak yerine interaktif bir finans terminali ortamı başlatabilirsiniz:
+
+```bash
+fintables shell
+```
+
+```text
+🚀 Fintables Interactive Shell (v0.1.0)
+fintables> company ASELS
+fintables> symbol FROTO summary
+fintables> watchlist add FROTO
+fintables> exit
+```
+
+## Python SDK Kullanımı
+
+Paketi başka bir Python projesinde kütüphane/SDK olarak kullanmak isterseniz `FintablesClient` istemcisini ve endpoint fonksiyonlarını doğrudan import edebilirsiniz:
+
+```python
+import asyncio
+from fintables import FintablesClient
+from fintables.api.endpoints import get_company, get_symbol_summary, add_favorite
+
+async def main():
+    async with FintablesClient() as client:
+        # Şirket detayları (Public)
+        company = await get_company(client, "ASELS")
+        print(f"Şirket Kodu: {company.code} | Ünvan: {company.title}")
+
+        # Sembol özeti (Public)
+        summary = await get_symbol_summary(client, "ASELS")
+        print(f"Sektör Sayısı: {len(summary.data.sectors)}")
+
+        # Favori ekleme (Authenticated - .env bilgilerini kullanır)
+        # res = await add_favorite(client, "ASELS")
+
+if __name__ == "__main__":
+    asyncio.run(main())
 ```
 
 ## Yasal Uyarı (Disclaimer)
