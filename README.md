@@ -1,6 +1,16 @@
-# Fintables
 
-Fintables mobil API'si için Python paketi ve CLI aracı.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d80b6116-ae94-4cbb-992e-88059b544ddd" width="128" height="128" alt="Fintables icon">
+</p>
+
+
+<h1 align="center">Fintables</h1>
+
+<p align="center">
+  Fintables mobil API'si için Python paketi ve CLI aracı.
+</p>
+
+
 
 ## Özellikler
 - **Public Endpointler**: Şirket detayları (`company`), sembol özetleri (`symbol summary`), analist değerlendirmeleri (`analyst`), çoklu arama (`search`).
