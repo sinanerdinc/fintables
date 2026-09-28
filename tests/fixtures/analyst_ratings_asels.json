@@ -1,0 +1,68 @@
+{
+    "results": [
+        {
+            "published_at": "2026-09-09T06:49:10Z",
+            "brokerage": {
+                "code": "PHC",
+                "title": "Phillip Capital Menkul Değerler",
+                "logo": "https://storage.fintables.com/media/uploads/brokerage-logos/phillip_menkul_icon.jpg",
+                "public_company": null,
+                "short_title": "Phillip",
+                "is_listed": true
+            },
+            "code": "ASELS",
+            "price_target": 546.6,
+            "type": "endeks_ustu",
+            "in_model_portfolio": false,
+            "attachments": []
+        },
+        {
+            "published_at": "2026-09-07T07:23:57Z",
+            "brokerage": {
+                "code": "KVY",
+                "title": "Kuveyt Türk Yatırım",
+                "logo": "https://storage.fintables.com/media/uploads/brokerage-logos/kuveyt_turk_yatirim_icon.jpg",
+                "public_company": null,
+                "short_title": "Kuveyt Türk",
+                "is_listed": false
+            },
+            "code": "ASELS",
+            "price_target": 534.5,
+            "type": "al",
+            "in_model_portfolio": true,
+            "attachments": []
+        },
+        {
+            "published_at": "2026-08-05T08:00:00Z",
+            "brokerage": {
+                "code": "YKY",
+                "title": "Yapı Kredi Yatırım",
+                "logo": null,
+                "public_company": null,
+                "short_title": "Yapı Kredi",
+                "is_listed": true
+            },
+            "code": "ASELS",
+            "price_target": 400.0,
+            "type": "tut",
+            "in_model_portfolio": false,
+            "attachments": []
+        },
+        {
+            "published_at": "2026-08-01T08:00:00Z",
+            "brokerage": {
+                "code": "IYM",
+                "title": "İnfo Yatırım",
+                "logo": null,
+                "public_company": null,
+                "short_title": "İnfo",
+                "is_listed": true
+            },
+            "code": "ASELS",
+            "price_target": null,
+            "type": null,
+            "in_model_portfolio": false,
+            "attachments": []
+        }
+    ]
+}

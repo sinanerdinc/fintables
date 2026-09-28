@@ -1,0 +1,93 @@
+{
+  "next": "https://api.fintables.com/topic-feed/?cursor=cD0yMDI2LTA2LTIy&for_everyone=0&page_size=30&symbols=FROTO",
+  "previous": null,
+  "results": [
+    {
+      "id": "7e8012ad-0484-4bfe-83c7-7101220cd999",
+      "type": "post",
+      "slug": "otomotiv-uretimi-yilin-ilk-7-ayinda-73-azaldi",
+      "title": "Otomotiv Üretimi Yılın İlk 7 Ayında %7,3 Azaldı",
+      "highlight": false,
+      "importance": "mid",
+      "pinned": false,
+      "date": "2026-09-14T09:58:45Z",
+      "post": {
+        "body": "OSD: Yılın ilk 8 ayında toplam otomotiv üretimi...",
+        "link": null,
+        "attachments": [],
+        "content": null
+      },
+      "topics": [
+        {
+          "type": "symbol",
+          "id": "FROTO"
+        }
+      ]
+    },
+    {
+      "id": "8f9012ad-1111-2222-3333-444455556666",
+      "type": "news",
+      "slug": "kap-ford-yeni-kabin",
+      "title": "Yeni Kabin Programı Yatırımı",
+      "subtitle": null,
+      "date": "2026-09-04T11:00:00Z",
+      "importance": "high",
+      "pinned": false,
+      "news": {
+        "id": "news-123",
+        "published_at": "2026-09-04T11:00:00Z",
+        "kap_id": 987654,
+        "title": "Yeni Kabin Programı",
+        "type": "ODA",
+        "summary": "Yeni kabin yatırımı",
+        "subject": "Özel Durum Açıklaması",
+        "embed_url": "https://kap.org.tr/...",
+        "attachments": [],
+        "note": "Ford Trucks 364M Euro yatırım"
+      },
+      "topics": []
+    },
+    {
+      "id": "9a0012ad-2222-3333-4444-555566667777",
+      "type": "newsletter",
+      "slug": "otomotiv-bulteni-eylul",
+      "title": "Sektörel Görünüm - Eylül 2026 Otomotiv Bülteni",
+      "date": "2026-09-02T08:00:00Z",
+      "newsletter": {
+        "id": "nl-1",
+        "title": "Eylül 2026 Otomotiv Bülteni",
+        "author": {
+          "name": "Fintables Araştırma",
+          "slug": "fintables-arastirma"
+        },
+        "category": {
+          "slug": "sektorel",
+          "title": "Sektörel Görünüm"
+        }
+      },
+      "topics": []
+    },
+    {
+      "id": "ab1012ad-3333-4444-5555-666677778888",
+      "type": "article",
+      "slug": "ford-otosan-toplanti-notlari",
+      "title": "Ford Otosan Analist Toplantısı Notları",
+      "date": "2026-08-15T14:30:00Z",
+      "article": {
+        "id": 55,
+        "slug": "ford-notlari",
+        "title": "Ford Otosan Analist Toplantısı Notları",
+        "author": {
+          "name": "Fintables Analiz",
+          "slug": "fintables-analiz"
+        },
+        "category": {
+          "id": 1,
+          "slug": "sirket-notlari",
+          "title": "Şirket Notları"
+        }
+      },
+      "topics": []
+    }
+  ]
+}

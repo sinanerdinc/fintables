@@ -1,0 +1,84 @@
+{
+  "balance": {
+    "periods": [
+      {
+        "year": 2026,
+        "month": 6,
+        "is_inflation_adjusted": true,
+        "is_consolidated": true,
+        "source_period": {
+          "year": 2026,
+          "month": 6
+        }
+      },
+      {
+        "year": 2026,
+        "month": 3,
+        "is_inflation_adjusted": true,
+        "is_consolidated": true,
+        "source_period": {
+          "year": 2026,
+          "month": 6
+        }
+      }
+    ],
+    "rows": [
+      {
+        "label": "Dönen Varlıklar",
+        "level": 0,
+        "values": [238889000000.0, 235141000000.0],
+        "quarter_values": [238889000000.0, 235141000000.0]
+      },
+      {
+        "label": "Nakit ve Nakit Benzerleri",
+        "level": null,
+        "values": [56042000000.0, 60663000000.0],
+        "quarter_values": [56042000000.0, 60663000000.0]
+      }
+    ]
+  },
+  "income": {
+    "periods": [
+      {
+        "year": 2026,
+        "month": 6,
+        "is_inflation_adjusted": true,
+        "is_consolidated": true,
+        "source_period": {
+          "year": 2026,
+          "month": 6
+        }
+      }
+    ],
+    "rows": [
+      {
+        "label": "Satış Gelirleri",
+        "level": 0,
+        "values": [120000000000.0],
+        "quarter_values": [65000000000.0]
+      }
+    ]
+  },
+  "cashflow": {
+    "periods": [
+      {
+        "year": 2026,
+        "month": 6,
+        "is_inflation_adjusted": true,
+        "is_consolidated": true,
+        "source_period": {
+          "year": 2026,
+          "month": 6
+        }
+      }
+    ],
+    "rows": [
+      {
+        "label": "İşletme Faaliyetlerinden Nakit Akışları",
+        "level": 0,
+        "values": [35000000000.0],
+        "quarter_values": [18000000000.0]
+      }
+    ]
+  }
+}

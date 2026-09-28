@@ -1,0 +1,61 @@
+{
+    "code": "ASELS",
+    "title": "Aselsan Elektronik Sanayi ve Ticaret A.Ş.",
+    "logo": "https://storage.fintables.com/media/uploads/company-logos/aselsan_icon.png",
+    "cover": "https://storage.fintables.com/media/uploads/company-covers/ASELS_cover.jpg",
+    "sectors": [
+        31,
+        29
+    ],
+    "sheet_template": "default",
+    "sectoral_template": null,
+    "price": 377.0,
+    "fiscal_period_start_date": null,
+    "fiscal_period_end_date": null,
+    "description": "Türkiye'nin en büyük savunma elektroniği kuruluşu olan Aselsan...",
+    "enflasyon": true,
+    "ratio_types": [
+        {
+            "name": "Likidite Oranları",
+            "key": "likidite-oranlari",
+            "data": [
+                {
+                    "key": "cari_oran",
+                    "name": "Cari Oran",
+                    "allowed": true
+                },
+                {
+                    "key": "likidite_orani",
+                    "name": "Likidite Oranı",
+                    "allowed": true
+                },
+                {
+                    "key": "nakit_oran",
+                    "name": "Nakit Oran",
+                    "allowed": true
+                }
+            ]
+        },
+        {
+            "name": "Kaldıraç Oranları",
+            "key": "kaldirac-oranlari",
+            "data": [
+                {
+                    "key": "finansal_borc_orani",
+                    "name": "Finansal Borç Oranı",
+                    "allowed": false
+                }
+            ]
+        }
+    ],
+    "in_katilim_index": true,
+    "has_meta": true,
+    "has_buybacks": true,
+    "has_participation": true,
+    "has_business_contracts": true,
+    "has_sectoral_data_types": true,
+    "is_new_ipo": false,
+    "next_financial_statement_date": null,
+    "functional_currency": null,
+    "administrative_measures": []
+}

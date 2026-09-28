@@ -1,0 +1,64 @@
+{
+  "results": [
+    {
+      "found": 2,
+      "hits": [
+        {
+          "document": {
+            "code": "KOPOL",
+            "flags": [],
+            "id": "symbols_KOPOL",
+            "tags": "koza polyester sanayi ve ticaret a.ş.",
+            "title": "Koza <mark>Polyester</mark> Sanayi ve Ticaret A.Ş.",
+            "type": "equity"
+          },
+          "text_match": 570725357
+        },
+        {
+          "document": {
+            "code": "SASA",
+            "flags": ["xu100"],
+            "id": "symbols_SASA",
+            "tags": "sasa polyester sanayi a.ş.",
+            "title": "Sasa <mark>Polyester</mark> Sanayi A.Ş.",
+            "type": "equity"
+          },
+          "text_match": 570725357
+        }
+      ],
+      "out_of": 2,
+      "page": 1
+    },
+    {
+      "found": 0,
+      "hits": [],
+      "out_of": 0,
+      "page": 1
+    },
+    {
+      "found": 235,
+      "hits": [
+        {
+          "document": {
+            "code": "SL1KM.V",
+            "flags": [],
+            "id": "symbols_SL1KM.V",
+            "priority": 100,
+            "tags": "varant",
+            "title": "İnfo Yatırım 30 Eylül 2026 Vadeli SASA Alım Varantı",
+            "type": "warrant"
+          },
+          "text_match": 460000000
+        }
+      ],
+      "out_of": 235,
+      "page": 1
+    },
+    {
+      "found": 0,
+      "hits": [],
+      "out_of": 0,
+      "page": 1
+    }
+  ]
+}

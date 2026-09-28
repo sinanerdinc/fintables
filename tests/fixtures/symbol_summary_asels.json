@@ -1,0 +1,154 @@
+{
+    "data": {
+        "ipo_stats": false,
+        "sectors": [
+            {
+                "id": 31,
+                "slug": "imalat",
+                "title": "İmalat",
+                "description": "İmalat bir yarı mamulün...",
+                "og": "https://storage.fintables.com/media/uploads/ed01775a61ee4ae198a1ac2bb1ee4fca.jpg",
+                "cover": "https://storage.fintables.com/media/uploads/imalat_cover.jpg"
+            },
+            {
+                "id": 29,
+                "slug": "savunma",
+                "title": "Savunma",
+                "description": "Savunma sanayi...",
+                "og": null,
+                "cover": null
+            }
+        ],
+        "inflation_affected": false,
+        "multipliers": {
+            "title": "Çarpanlar",
+            "data": [
+                {
+                    "title": "F/K",
+                    "value": "41.68",
+                    "type": "number",
+                    "format": {
+                        "decimals": 2,
+                        "abbreviation": false,
+                        "nullToNa": false
+                    }
+                },
+                {
+                    "title": "FD/FAVÖK",
+                    "value": "28.65",
+                    "type": "number",
+                    "format": {
+                        "decimals": 2,
+                        "abbreviation": false,
+                        "nullToNa": false
+                    }
+                },
+                {
+                    "title": "PD/DD",
+                    "value": "5.60",
+                    "type": "number",
+                    "format": {
+                        "decimals": 2,
+                        "abbreviation": false,
+                        "nullToNa": false
+                    }
+                }
+            ]
+        },
+        "company_details": {
+            "title": "Şirket Detayları",
+            "data": [
+                {
+                    "title": "Fiili Dolaşım Oranı",
+                    "value": "25.78",
+                    "type": "percentage",
+                    "format": {
+                        "decimals": 2,
+                        "abbreviation": false,
+                        "nullToNa": false
+                    }
+                },
+                {
+                    "title": "Piyasa Değeri",
+                    "value": "1719120000000",
+                    "type": "currency",
+                    "format": {
+                        "decimals": 2,
+                        "abbreviation": true,
+                        "nullToNa": false
+                    }
+                },
+                {
+                    "title": "Katılım Endeksi",
+                    "value": "Uygun",
+                    "type": "boolean",
+                    "format": {
+                        "decimals": 0,
+                        "abbreviation": false,
+                        "nullToNa": false
+                    }
+                }
+            ]
+        },
+        "bars": [],
+        "lines": [],
+        "income_statement": {
+            "title": "Özet Gelir Tablosu",
+            "period": {
+                "year": 2026,
+                "month": 6
+            },
+            "data": [
+                {
+                    "title": "Satışlar",
+                    "value": "88494252000",
+                    "type": "currency",
+                    "format": {
+                        "decimals": 2,
+                        "abbreviation": true,
+                        "nullToNa": false
+                    }
+                }
+            ]
+        },
+        "balance_statement": {
+            "title": "Özet Bilanço",
+            "period": {
+                "year": 2026,
+                "month": 6
+            },
+            "data": [
+                {
+                    "title": "Toplam Varlıklar",
+                    "value": "489237000000",
+                    "type": "currency",
+                    "format": {
+                        "decimals": 2,
+                        "abbreviation": true,
+                        "nullToNa": false
+                    }
+                }
+            ]
+        },
+        "yield": {
+            "title": "Getiri Analizi",
+            "data": {
+                "1w": {
+                    "first": 392.5,
+                    "low": 370.75,
+                    "high": 407.0
+                },
+                "1m": {
+                    "first": 387.5,
+                    "low": 370.75,
+                    "high": 412.75
+                },
+                "ytd": {
+                    "first": 231.7,
+                    "low": 228.5,
+                    "high": 450.0
+                }
+            }
+        }
+    }
+}
