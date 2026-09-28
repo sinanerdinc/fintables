@@ -11,9 +11,7 @@ Fintables mobil API'si için Python paketi ve CLI aracı.
 
 ## Kurulum
 ```bash
-pip install -e .
-# veya test paketleri ile:
-pip install -e ".[dev]"
+pip install fintables
 ```
 
 ## Yapılandırma
