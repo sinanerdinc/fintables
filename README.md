@@ -22,6 +22,32 @@ pip install -e ".[dev]"
 cp .env.example .env
 ```
 
+## Python SDK Kullanımı
+
+Paketi başka bir Python projesinde kütüphane/SDK olarak kullanmak isterseniz `FintablesClient` istemcisini ve endpoint fonksiyonlarını doğrudan import edebilirsiniz:
+
+```python
+import asyncio
+from fintables import FintablesClient
+from fintables.api.endpoints import get_company, get_symbol_summary, add_favorite
+
+async def main():
+    async with FintablesClient() as client:
+        # Şirket detayları (Public)
+        company = await get_company(client, "ASELS")
+        print(f"Şirket Kodu: {company.code} | Ünvan: {company.title}")
+
+        # Sembol özeti (Public)
+        summary = await get_symbol_summary(client, "ASELS")
+        print(f"Sektör Sayısı: {len(summary.data.sectors)}")
+
+        # Favori ekleme (Authenticated - .env bilgilerini kullanır)
+        # res = await add_favorite(client, "ASELS")
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
 ## CLI Kullanımı
 ```bash
 # Şirket bilgisi
