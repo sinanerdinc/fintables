@@ -7,7 +7,7 @@
 <h1 align="center">Fintables</h1>
 
 <p align="center">
-  Fintables mobil API'si için Python paketi ve CLI aracı.
+  Fintables Python paketi ve CLI aracı.
 </p>
 
 
