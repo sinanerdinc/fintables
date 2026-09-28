@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "setuptools-scm>=8.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "fintables"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Fintables mobile API client and CLI tool"
 readme = "README.md"
 license = {text = "MIT"}
@@ -59,3 +59,8 @@ pythonpath = ["."]
 [tool.pyright]
 include = ["src", "tests"]
 extraPaths = ["."]
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "no-local-version"
+fallback_version = "0.1.0"

@@ -15,6 +15,8 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Git taglerini tam çekmek için
 
       - name: Install uv
         uses: astral-sh/setup-uv@v5
@@ -24,13 +26,23 @@ jobs:
         with:
           python-version-file: "pyproject.toml"
 
-      - name: Install dependencies & run tests before release
+      - name: Extract version from Tag
+        id: get_version
+        run: |
+          # GITHUB_REF_NAME "v0.1.1" -> "0.1.1"
+          VERSION="${GITHUB_REF_NAME#v}"
+          echo "PKG_VERSION=$VERSION" >> $GITHUB_ENV
+          echo "Publishing version: $VERSION"
+
+      - name: Install dependencies & run tests
         run: |
           uv sync --all-extras
           uv run pytest
 
-      - name: Build package
+      - name: Build package with dynamic version
         run: uv build
+        env:
+          SETUPTOOLS_SCM_PRETEND_VERSION: ${{ env.PKG_VERSION }}
 
       - name: Publish package to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
