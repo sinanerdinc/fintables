@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d80b6116-ae94-4cbb-992e-88059b544ddd" width="128" height="128" alt="Fintables icon">
+  <img src="https://raw.githubusercontent.com/sinanerdinc/fintables/main/icon.png" width="128" height="128" alt="Fintables icon">
 </p>
 
 
@@ -29,6 +29,36 @@ pip install fintables
 ```bash
 cp .env.example .env
 ```
+
+## Model Context Protocol (MCP) Yapay Zeka Entegrasyonu
+
+`fintables`, **FastMCP** mimarisi sayesinde Claude Desktop, Antigravity IDE, Cursor veya vLLM/Ollama destekli yapay zeka ajanlarıyla doğrudan konuşturulabilir.
+
+### MCP Sunucusunu Başlatma:
+```bash
+# Standart STDIO modunda çalıştırma (Claude Desktop / IDE'ler için)
+fintables mcp
+
+# veya SSE modunda
+fintables mcp --transport sse
+```
+
+### Claude Desktop / Cursor Konfigürasyonu (`claude_desktop_config.json`):
+```json
+{
+  "mcpServers": {
+    "fintables": {
+      "command": "fintables",
+      "args": ["mcp"],
+      "env": {
+        "FINTABLES_EMAIL": "user@example.com",
+        "FINTABLES_PASSWORD": "secretpassword"
+      }
+    }
+  }
+}
+```
+*(Artık Claude veya AI Ajanınıza "ASELS bilançosunu incele", "TLY fon getirilerini getir", "FROTO için hedef fiyat analist tahminleri nedir?" gibi soruları doğrudan sorabilirsiniz.)*
 
 ## CLI Kullanımı
 ```bash
