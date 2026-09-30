@@ -32,7 +32,7 @@ cp .env.example .env
 
 ## Model Context Protocol (MCP) Yapay Zeka Entegrasyonu
 
-`fintables`, **FastMCP** mimarisi sayesinde Claude Desktop, Antigravity IDE, Cursor veya vLLM/Ollama destekli yapay zeka ajanlarıyla doğrudan konuşturulabilir.
+`fintables`, Claude Desktop, Antigravity IDE, Cursor veya vLLM/Ollama destekli yapay zeka ajanlarıyla doğrudan konuşturulabilir.
 
 ### MCP Sunucusunu Başlatma:
 ```bash
@@ -58,7 +58,30 @@ fintables mcp --transport sse
   }
 }
 ```
-*(Artık Claude veya AI Ajanınıza "ASELS bilançosunu incele", "TLY fon getirilerini getir", "FROTO için hedef fiyat analist tahminleri nedir?" gibi soruları doğrudan sorabilirsiniz.)*
+
+Eğer python ile sanal bir geliştirme ortamında çalışıyorsanız (.venv) o zaman
+
+```json
+{
+  "mcpServers": {
+    "fintables": {
+      "command": "/Users/sinan/projects/invest/.venv/bin/fintables",
+      "args": ["mcp"],
+      "env": {
+        "FINTABLES_EMAIL": "user@example.com",
+        "FINTABLES_PASSWORD": "secretpassword"
+      }
+    }
+  }
+}
+```
+
+gibi "command" alanına sanal geliştirme ortamının dosya yolunu vermelisiniz.
+
+Artık Claude veya AI Ajanınıza şöyle sorular sorabilirsiniz;
+- FROTO (Ford Otosan) için Fintables'taki son KAP açıklamalarını, haber akışını ve yayınlanmış araştırma raporlarını getir. Şirketle ilgili son dönemdeki en kritik gelişme nedir?
+- ADE ve GPZ kodlu yatırım fonlarının son dönem getirilerini, risk skorlarını ve portföylerindeki varlık dağılımlarını karşılaştır.
+- TTRAK için hedef fiyat analist tahminleri nedir?
 
 ## CLI Kullanımı
 ```bash
