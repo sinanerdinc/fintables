@@ -25,9 +25,24 @@ pip install fintables
 ```
 
 ## Yapılandırma
-`.env.example` dosyasını `.env` olarak kopyalayın ve kimlik bilgilerinizi girin:
+
+Kimlik bilgilerinizi `.env` dosyasıyla veya ortam değişkenleriyle (Environment Variables) tanımlayabilirsiniz:
+
+### 1. `.env` Dosyası ile
+`.env.example` dosyasını `.env` olarak kopyalayın ve fintables e-posta ve şifrenizi girin:
+
+### 2. Ortam Değişkenleri ile
+**macOS / Linux (zsh / bash):**
 ```bash
-cp .env.example .env
+export FINTABLES_USERNAME='kullanici@ornek.com'
+export FINTABLES_PASSWORD='parola#123'
+```
+
+
+**Windows (PowerShell):**
+```powershell
+$env:FINTABLES_USERNAME = 'kullanici@ornek.com'
+$env:FINTABLES_PASSWORD = 'parola#123'
 ```
 
 ## Model Context Protocol (MCP) Yapay Zeka Entegrasyonu
@@ -76,7 +91,7 @@ Eğer python ile sanal bir geliştirme ortamında çalışıyorsanız (.venv) o 
 }
 ```
 
-gibi "command" alanına sanal geliştirme ortamının dosya yolunu vermelisiniz.
+gibi **"command"** alanına sanal geliştirme ortamının dosya yolunu vermelisiniz.
 
 Artık Claude veya AI Ajanınıza şöyle sorular sorabilirsiniz;
 - FROTO (Ford Otosan) için Fintables'taki son KAP açıklamalarını, haber akışını ve yayınlanmış araştırma raporlarını getir. Şirketle ilgili son dönemdeki en kritik gelişme nedir?
