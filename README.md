@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d80b6116-ae94-4cbb-992e-88059b544ddd" width="128" height="128" alt="Fintables icon">
+  <img src="https://github.com/sinanerdinc/fintables/blob/main/icon.png?raw=true" width="128" height="128" alt="Fintables icon">
 </p>
 
 
