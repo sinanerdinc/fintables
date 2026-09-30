@@ -15,6 +15,7 @@ from fintables.cli.commands.watchlist import watchlist_app
 from fintables.cli.commands.portfolio import portfolio_app
 from fintables.cli.commands.newsletter import newsletter_app
 from fintables.cli.commands.post import post_app
+from fintables.cli.commands.mcp import mcp_command
 from fintables.cli.commands.shell import shell_command
 from fintables.cli.commands.video import video_app
 from fintables.cli.commands.notification import notification_app
@@ -79,6 +80,9 @@ register_i18n(cmd_agenda, "cli.cmd.agenda")
 
 cmd_shell = app.command(name="shell", help=t("cli.cmd.shell"))(shell_command)
 register_i18n(cmd_shell, "cli.cmd.shell")
+
+cmd_mcp = app.command(name="mcp", help=t("cli.cmd.mcp"))(mcp_command)
+register_i18n(cmd_mcp, "cli.cmd.mcp")
 
 # Register command groups
 app.add_typer(watchlist_app, name="watchlist")
