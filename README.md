@@ -7,7 +7,7 @@
 <h1 align="center">Fintables</h1>
 
 <p align="center">
-  Fintables Python paketi ve CLI aracı.
+  Unofficial Python SDK, CLI & MCP Server.
 </p>
 
 
